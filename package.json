@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/ ",
-    "gulp": "gulp clean && npm run build && gulp build",
     "prepare": "npm run build",
+    "gulp": "gulp clean && gulp build",
     "publishme": "npm run gulp && npm publish lib/"
   },
   "repository": {
