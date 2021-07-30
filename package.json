@@ -8,8 +8,8 @@
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/ ",
     "gulp": "gulp clean && npm run build && gulp build",
-    "publishme": "npm run gulp && npm publish lib/",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publishme": "npm run gulp && npm publish lib/"
   },
   "repository": {
     "type": "git",
