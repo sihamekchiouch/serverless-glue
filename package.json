@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run gulp && npm pack lib/ && npm run buildpackage",
+    "prepare": "npm run gulp && cd lib/ && npm pack",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/",
     "gulp": "gulp clean && npm run build && gulp build",
-    "publishme": "npm run gulp && npm publish lib/",
-    "buildpackage": "cd lib/ && npm pack"
+    "publishme": "npm run gulp && npm publish lib/"
   },
   "repository": {
     "type": "git",
