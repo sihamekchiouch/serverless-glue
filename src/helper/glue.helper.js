@@ -78,6 +78,14 @@ export default class GlueHelper {
                     ]
                 ]})
             }
+            if (_job.DefaultArguments) {
+                let args = {};
+                for (let key of Object.keys(_job.DefaultArguments)) {
+                    args['--' + key] = _job.DefaultArguments[key];
+                }
+
+                glueJob.setExtraArguments(args);
+            }
             jobs.push(glueJob);
         }
         return jobs;
