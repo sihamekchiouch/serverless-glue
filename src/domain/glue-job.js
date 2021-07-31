@@ -63,6 +63,10 @@ export default class GlueJob {
 
         return cfn;
     }
+    
+    setExtraArguments(extraArguments) {
+      this.extraArguments = extraArguments;
+    }
 
     getCFGlueJob() {
         let cfn = {
@@ -81,7 +85,8 @@ export default class GlueJob {
                 },
                 "DefaultArguments": {
                     "--job-language": this.language,
-                    "--TempDir": this.tmpDir || ""
+                    "--TempDir": this.tmpDir || "",
+                    ...this.extraArguments
                 },
             }
         };
