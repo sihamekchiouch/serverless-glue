@@ -112,7 +112,7 @@ export default class GlueHelper {
                     for (let key of Object.keys(_job.args)) {
                         args['--' + key] = _job.args[key];
                     }
-                    triggerAction.setArguments(_job.args);
+                    triggerAction.setArguments(args);
                 }
 
                 if (_job.timeout) {
