@@ -8,7 +8,7 @@
     "prepare": "npm run build",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/ ",
-    "gulp": "gulp clean && npm run build && gulp build",
+    "gulp": "gulp clean && npm run build && gulp build && npm run gulp",
     "publishme": "npm run gulp && npm publish lib/"
   },
   "repository": {
