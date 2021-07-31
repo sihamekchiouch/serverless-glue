@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/ ",
-    "prepare": "npm run build",
+    "prepare": "gulp clean && npm run build && gulp build",
     "gulp": "gulp clean && gulp build",
     "publishme": "npm run gulp && npm publish lib/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toryas/serverless-glue.git"
+    "url": "git+https://github.com/sihamekchiouch/serverless-glue.git"
   },
   "keywords": [
     "serverless",
