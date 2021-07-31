@@ -106,9 +106,15 @@ export default class GlueHelper {
             for (let job of _trigger.jobs) {
                 let _job = job.job;
                 const triggerAction = new GlueTriggerAction(_job.name);
+                
                 if (_job.args) {
+                    let args = {};
+                    for (let key of Object.keys(_job.args)) {
+                        args['--' + key] = _job.args[key];
+                    }
                     triggerAction.setArguments(_job.args);
                 }
+
                 if (_job.timeout) {
                     triggerAction.setTimeout(_job.timeout);
                 }
