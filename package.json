@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run build",
+    "prepare": "npm run build && gulp build && npm run gulp",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/ ",
     "gulp": "gulp clean && npm run build && gulp build && npm run gulp",
