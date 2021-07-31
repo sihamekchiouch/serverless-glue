@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run gulp && npm pack lib/ && find . | grep -v ./lib | xargs rm -rf  && cp -r ./lib/* . && rm -rf ./lib",
+    "prepare": "npm run gulp && npm pack lib/ && rm -rf ./src && cp -r ./lib/* . && rm -rf ./lib",
     "build": "babel src -d lib",
     "bp": "npm run gulp && npm pack lib/",
     "gulp": "gulp clean && npm run build && gulp build",
