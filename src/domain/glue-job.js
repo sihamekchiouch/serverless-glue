@@ -85,7 +85,6 @@ export default class GlueJob {
                 },
                 "DefaultArguments": {
                     "--job-language": this.language,
-                    "--TempDir": this.tmpDir || "",
                     ...this.extraArguments
                 },
             }
